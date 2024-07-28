@@ -26,12 +26,40 @@ class Fitness(QWidget):
         self.description = QLineEdit()
         self.description.setPlaceholderText("Enter a description")
 
-        self.submit_btn = QPushButton("submit)
+        self.submit_btn = QPushButton("submit")
         self.add_btn = QPushButton("add")
         self.delete_btn = QPushButton("delete")
         self.clear_btn = QPushButton("clear")
         self.dark_mode = QCheckBox("dark mode")
 
         self.table = QTableWidget()
+
         self.figure = plt.figure()
+        self.canvas = FigureCanvas(self.figure)
+
+        #layout design
+        self_master_layout = QHBoxLayout()
+        self.col1 = QVBoxLayout()
+        self.col2 = QVBoxLayout()
+
+        self.sub_row1 = QHBoxLayout()
+        self.sub_row2 = QHBoxLayout()
+        self.sub_row3 = QHBoxLayout()
+        self.sub_row4 = QHBoxLayout()
+
+        self.sub_row1.addWidget(QLabel("Date:"))
+        self.sub_row1.addWidget(self.date_box)
+
+        self.sub_row2.addWidget(QLabel("calories"))
+        self.sub_row2.addWidget(self.kal_box)
+
+        self.sub_row3.addWidget(QLabel("KM:"))
+        self.sub_row3.addWidget(self.distance_box)
+
+        self.sub_row4.addWidget(QLabel("Description"))
+        self.sub_row4.addWidget(self.description)
+
+
+
+
         
