@@ -20,3 +20,18 @@ class Fitness(QWidget):
 
         self.kal_box = QLineEdit()
         self.kal_box.setPlaceholderText("number of burned calories")
+
+        self.distance_box = QLineEdit()
+        self.distance_box.setPlaceholderText("enter distance  ran")
+        self.description = QLineEdit()
+        self.description.setPlaceholderText("Enter a description")
+
+        self.submit_btn = QPushButton("submit)
+        self.add_btn = QPushButton("add")
+        self.delete_btn = QPushButton("delete")
+        self.clear_btn = QPushButton("clear")
+        self.dark_mode = QCheckBox("dark mode")
+
+        self.table = QTableWidget()
+        self.figure = plt.figure()
+        
